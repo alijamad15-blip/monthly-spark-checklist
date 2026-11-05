@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>November Spark checklist</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Public+Sans:wght@400;600&display=swap">
+<style>
+:root{--bg:#FFF3F7;--card:#FFFFFF;--ink:#2B1420;--mute:#6B4A5A;--accent:#CE0058;--band:#CE0058;--mid:#E5558F;--soft:#F57EB6;--tint:#FFE4EE;--track:#FFD3E4;--edge:#9A6B80;--line:#F3C9D9;--dot:rgba(229,85,143,.13);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1D0F17;--card:#2A1520;--ink:#FFEEF5;--mute:#D9B3C5;--accent:#FF8FBF;--tint:#3A1E2C;--track:#4A2C3B;--edge:#A07890;--line:#4A2C3B;--dot:rgba(245,126,182,.10);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1D0F17;--card:#2A1520;--ink:#FFEEF5;--mute:#D9B3C5;--accent:#FF8FBF;--tint:#3A1E2C;--track:#4A2C3B;--edge:#A07890;--line:#4A2C3B;--dot:rgba(245,126,182,.10);color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle,var(--dot) 3px,transparent 3.5px);background-size:30px 30px;color:var(--ink);font:16px/1.45 "Public Sans",system-ui,sans-serif}
+main{max-width:560px;margin:0 auto;padding:16px 14px 40px}
+h1,h2,.big{font-family:"Bricolage Grotesque","Public Sans",system-ui,sans-serif}
+h1{font-size:27px;margin:4px 0 14px;font-weight:800;color:var(--accent)}
+.hero{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.band{background-color:var(--band);background-image:radial-gradient(circle,rgba(255,255,255,.17) 3px,transparent 3.5px);background-size:22px 22px;color:#fff;padding:16px 16px 18px}
+.band .lbl{font-size:14px;font-weight:600;margin-bottom:4px}
+.big{font-size:46px;font-weight:800;line-height:1}
+.big small{font-size:18px;font-weight:600}
+.heroin{padding:14px 16px 16px}
+.bar{height:14px;background:var(--track);border-radius:7px;margin:0 0 12px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--accent);border-radius:7px;transition:width .25s}
+@media (prefers-reduced-motion:reduce){.bar i{transition:none}}
+.stats{display:flex;gap:10px}
+.stats div{flex:1;background:var(--tint);border-radius:12px;padding:9px 10px;font-size:14px;color:var(--mute)}
+.stats b{display:block;font-size:20px;color:var(--ink);font-family:"Bricolage Grotesque",system-ui,sans-serif}
+.wk{margin-top:22px}
+.wkhead{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:6px}
+h2{font-size:18px;margin:0;font-weight:800;color:var(--accent)}
+h2::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--mid);margin-right:8px}
+.wkmeta{font-size:14px;color:var(--mute);text-align:right}
+.wkmeta.ok{color:var(--accent);font-weight:600}
+.row{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin-bottom:6px}
+.row.today{border:2px solid var(--accent)}
+.row.done{background:var(--tint)}
+.row.done .d{text-decoration:line-through}
+.tap{display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin:-6px -4px -6px -8px;flex:none;cursor:pointer}
+.chk{width:28px;height:28px;accent-color:var(--accent);cursor:pointer}
+.tag{display:inline-block;margin-left:8px;padding:0 8px;border:1px solid var(--accent);border-radius:999px;color:var(--accent);font-size:12px;font-weight:600;vertical-align:1px}
+.info{flex:1;min-width:0}
+.d{font-weight:600}
+.h{font-size:14px;color:var(--mute)}
+.amt{width:96px;min-height:44px;font:inherit;padding:8px;border:1px solid var(--edge);border-radius:10px;background:var(--card);color:var(--ink);text-align:right}
+.amt:focus-visible,.chk:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.chk:disabled,.amt:disabled{opacity:.6}
+.banner:empty,.note:empty{display:none}
+.banner{margin:0 0 12px;padding:9px 12px;border-radius:12px;background:var(--tint);border:1px solid var(--line);font-size:14px;color:var(--mute)}
+.note{margin-top:20px;font-size:14px;color:var(--mute)}
+button{margin-top:14px;min-height:44px;font:inherit;font-weight:600;padding:10px 16px;border-radius:999px;border:1.5px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
+</style>
+</head>
+<body>
+<main id="main">
+<h1>November Spark checklist</h1>
+<div class="banner" id="banner" role="status"></div>
+<section class="hero" aria-label="Progress toward $3,000 goal">
+  <div class="band"><div class="lbl">Earned this month</div><div class="big"><span id="total">$0</span> <small>of $3,000</small></div></div>
+  <div class="heroin">
+  <div class="bar" role="progressbar" aria-label="Earned toward $3,000 goal" aria-valuemin="0" aria-valuemax="3000" id="pb"><i id="fill"></i></div>
+  <div class="stats">
+    <div>Left to goal<b id="left">$3,000</b></div>
+    <div>Shifts left<b id="shl">20</b></div>
+    <div>Need per shift<b id="per">$0</b></div>
+  </div>
+</div></section>
+<div id="weeks"></div>
+<div class="note" id="mathcheck"></div>
+<button id="reset" type="button">Reset all shifts</button>
+</main>
+<script>
+(function(){
+var W=[
+{n:"Week 1",c:"Nov 8",t:75000,s:[["Wed, Nov 4","3–8 PM",10000,"2026-11-04"],["Thu, Nov 5","3–8 PM",10000,"2026-11-05"],["Fri, Nov 6","All day",20000,"2026-11-06"],["Sat, Nov 7","All day",20000,"2026-11-07"],["Sun, Nov 8","All day",20000,"2026-11-08"]]},
+{n:"Week 2",c:"Nov 15",t:150000,s:[["Tue, Nov 10","3–8 PM",10000,"2026-11-10"],["Wed, Nov 11","3–8 PM",10000,"2026-11-11"],["Fri, Nov 13","All day",20000,"2026-11-13"],["Sat, Nov 14","All day",20000,"2026-11-14"],["Sun, Nov 15","All day",20000,"2026-11-15"]]},
+{n:"Week 3",c:"Nov 22",t:225000,s:[["Tue, Nov 17","3–8 PM",10000,"2026-11-17"],["Wed, Nov 18","3–8 PM",10000,"2026-11-18"],["Fri, Nov 20","All day",20000,"2026-11-20"],["Sat, Nov 21","All day",20000,"2026-11-21"],["Sun, Nov 22","All day",20000,"2026-11-22"]]},
+{n:"Week 4",c:"Nov 29",t:300000,s:[["Tue, Nov 24","3–8 PM",10000,"2026-11-24"],["Wed, Nov 25","All day (pre-Thanksgiving)",20000,"2026-11-25"],["Fri, Nov 27","All day (Black Friday)",20000,"2026-11-27"],["Sat, Nov 28","All day",20000,"2026-11-28"],["Sun, Nov 29","All day",20000,"2026-11-29"]]},
+{n:"Flex day",c:"Nov 30",t:300000,s:[["Mon, Nov 30","Catch-up shift",10000,"2026-11-30"]]}
+];
+var GOAL=300000,KEY="spark-nov-2026-v2",S={},db=null,ref=null,canWrite=true,timer=null,pending=null,dirty=false,inflight=0;
+function toCents(x){var n=parseFloat(String(x).replace(/[$,]/g,""));return isFinite(n)&&n>0?Math.round(n*100):0}
+function fmt(c){return "$"+(c/100).toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2})}
+function fmt0(c){return "$"+Math.round(c/100).toLocaleString("en-US")}
+function selfTest(){
+ var hist=[74899,59672,36651,47440,52078,28917,41016,62039,48964],sum=hist.reduce(function(a,b){return a+b},0);
+ return sum===451676&&toCents("0.30")===30&&toCents("748.99")===74899&&toCents("$1,200.10")===120010&&toCents("")===0&&(10+20)/10===3;
+}
+var now=new Date(),todayKey=now.getFullYear()+"-"+String(now.getMonth()+1).padStart(2,"0")+"-"+String(now.getDate()).padStart(2,"0");
+var root=document.getElementById("weeks"),banner=document.getElementById("banner");
+function loadLocal(){try{S=(JSON.parse(localStorage.getItem(KEY)||"{}")||{}).e||{}}catch(e){S={}}}
+function persist(now){
+ if(!canWrite)return;
+ if(!ref){try{localStorage.setItem(KEY,JSON.stringify({e:S}))}catch(e){}return}
+ dirty=true;clearTimeout(pending);
+ var go=function(){
+  var snap=JSON.parse(JSON.stringify(S));inflight++;
+  ref.set({e:snap}).then(function(){inflight--;if(!inflight&&JSON.stringify(S)===JSON.stringify(snap))dirty=false})
+  .catch(function(){inflight--;if(!inflight)dirty=false;banner.textContent="Couldn’t save just now. Check your connection."});
+ };
+ if(now)go();else pending=setTimeout(go,400);
+}
+function build(){
+ root.innerHTML="";
+ W.forEach(function(w,wi){
+  var sec=document.createElement("section");sec.className="wk";
+  var head=document.createElement("div");head.className="wkhead";
+  head.innerHTML='<h2>'+w.n+'</h2><div class="wkmeta" id="m'+wi+'"></div>';
+  sec.appendChild(head);
+  w.s.forEach(function(s,si){
+   var id=wi+"-"+si,v=S[id]||{d:false,c:0};
+   var r=document.createElement("div");
+   r.className="row"+(s[3]===todayKey?" today":"")+(v.d?" done":"");
+   var dis=canWrite?"":" disabled";
+   r.innerHTML='<label class="tap"><input class="chk" type="checkbox" aria-label="Done: '+s[0]+'"'+(v.d?" checked":"")+dis+'></label>'+
+    '<div class="info"><div class="d">'+s[0]+(s[3]===todayKey?'<span class="tag">Today</span>':'')+'</div><div class="h">'+s[1]+' · goal '+fmt0(s[2])+'</div></div>'+
+    '<input class="amt" type="number" inputmode="decimal" min="0" step="0.01" placeholder="$0.00" aria-label="Earned on '+s[0]+'" value="'+(v.c?(v.c/100).toFixed(2):"")+'"'+dis+'>';
+   var cb=r.querySelector(".chk"),am=r.querySelector(".amt");
+   cb.addEventListener("change",function(){S[id]=S[id]||{d:false,c:0};S[id].d=cb.checked;r.classList.toggle("done",cb.checked);persist(true);calc()});
+   am.addEventListener("input",function(){S[id]=S[id]||{d:false,c:0};S[id].c=toCents(am.value);persist();calc()});
+   sec.appendChild(r);
+  });
+  root.appendChild(sec);
+ });
+}
+function calc(){
+ var total=0,left=0,cum=0,weekSum=0;
+ W.forEach(function(w,wi){
+  var sub=0;
+  w.s.forEach(function(s,si){var v=S[wi+"-"+si]||{d:false,c:0};sub+=v.c||0;if(!v.d)left++});
+  total+=sub;cum+=sub;weekSum+=sub;
+  var m=document.getElementById("m"+wi),ok=cum>=w.t;
+  m.textContent=(ok?"Checkpoint met · ":"")+fmt(sub)+" this week · "+fmt0(cum)+" of "+fmt0(w.t)+" by "+w.c;
+  m.className="wkmeta"+(ok?" ok":"");
+ });
+ document.getElementById("reset").disabled=!canWrite;
+ var rem=Math.max(0,GOAL-total);
+ document.getElementById("total").textContent=fmt(total);
+ document.getElementById("left").textContent=fmt(rem);
+ document.getElementById("shl").textContent=left;
+ document.getElementById("per").textContent=left?fmt(Math.ceil(rem/left)):"$0.00";
+ document.getElementById("fill").style.width=Math.min(100,total*100/GOAL)+"%";
+ document.getElementById("pb").setAttribute("aria-valuenow",Math.round(total/100));
+ document.getElementById("pb").setAttribute("aria-valuetext",fmt(total)+" of $3,000");
+ var good=selfTest()&&weekSum===total;
+ document.getElementById("mathcheck").textContent=good?"":"Math check failed. Don’t trust these totals; tell LJ.";
+}
+var rb=document.getElementById("reset"),armed=false,armT=null;
+function disarm(){armed=false;clearTimeout(armT);rb.textContent="Reset all shifts"}
+rb.addEventListener("click",function(){
+ if(!canWrite)return;
+ if(!armed){armed=true;rb.textContent="Tap again to clear every shift";armT=setTimeout(disarm,5000);return}
+ disarm();S={};persist(true);build();calc();
+ banner.textContent="";
+});
+function start(){
+ build();calc();document.getElementById("reset").disabled=!canWrite;
+ banner.textContent=canWrite?"":"View only";
+}
+function init(){
+ loadLocal();start();
+ if(!(window.claude&&claude.use))return;
+ Promise.all([claude.use("db"),claude.use("user")]).then(function(r){
+  db=r[0];var user=r[1];
+  if(!db)return;
+  canWrite=!!(user&&user.canEdit&&user.canEdit());
+  ref=db.doc("shifts/nov2026");
+  build();calc();
+  banner.textContent="";
+  timer=setTimeout(function(){banner.textContent="Can’t reach saved data yet. Numbers shown may be out of date."},10000);
+  ref.onSnapshot(function(snap){
+   clearTimeout(timer);
+   banner.textContent=canWrite?"":"View only";
+   if(dirty||inflight)return;
+   var d=snap.exists?snap.data():null,inc=(d&&d.e)||{};
+   if(JSON.stringify(inc)===JSON.stringify(S)&&root.children.length)return;
+   S=inc;
+   var a=document.activeElement;
+   if(a&&a.classList&&a.classList.contains("amt")){calc()}else{start()}
+  },function(){clearTimeout(timer);banner.textContent="Can’t load saved data. Reopen the page to retry."});
+ }).catch(function(){});
+}
+init();
+})();
+</script>
+</body>
+</html>
